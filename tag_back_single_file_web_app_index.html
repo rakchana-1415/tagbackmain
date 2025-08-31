@@ -103,22 +103,23 @@
   <!-- QRCode library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-Bc5sZ3H0S6+QKneCkaoMBm3f2uC6rU4GQ3q3y2kzXv0l9G8zB+QH8wUEZ9q3nZ9cp1A2vS6H4k+F7G2LrC5z+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- Firebase SDKs (modular) -->
+  <!-- Firebase SDKs and your script -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, collection, addDoc, doc, getDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    // 1) FILL THESE VALUES from your Firebase project settings (Project Settings → General → Your Apps)
+    // Firebase config
     const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_AUTH_DOMAIN",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_STORAGE_BUCKET",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
+      apiKey: "AIzaSyDN7or5wX6W097v90Mdotzi2Y43GStJx_8",
+      authDomain: "tagbackmain.firebaseapp.com",
+      projectId: "tagbackmain",
+      storageBucket: "tagbackmain.firebasestorage.app",
+      messagingSenderId: "531913857294",
+      appId: "1:531913857294:web:ab42bc3b9dc61743bfdf5f",
+      measurementId: "G-SF9GLNSXH9"
     };
 
-    // --- App & DB ---
+    // Initialize Firebase and Firestore
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
